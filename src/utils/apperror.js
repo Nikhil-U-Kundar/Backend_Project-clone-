@@ -4,7 +4,7 @@ class apiError extends Error{
         statusCode,
         message="something went wrong",
         error=[],
-        statck=""
+        stack=""
     ){
         super(message)
         this.statusCode=statusCode
@@ -14,7 +14,7 @@ class apiError extends Error{
         this.error=error
 
     if(statck){                                                    //   make this code buyhurts for noww
-    this.stack =statck                                            //   make this code buyhurts for noww
+    this.stack =stack                                            //   make this code buyhurts for noww
     }else{                                                        //   make this code buyhurts for noww
         Error.captureStackTrace(this,this.constructor)            //   make this code buyhurts for noww
     }                                                            //   make this code buyhurts for noww//   
